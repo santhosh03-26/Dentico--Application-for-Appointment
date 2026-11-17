@@ -1,0 +1,11 @@
+services:
+  # Web Service (Full-stack app)
+  - type: web
+    name: dentico-clinic
+    runtime: node
+    plan: free
+    buildCommand: npm install --legacy-peer-deps --include=dev && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
